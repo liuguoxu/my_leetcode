@@ -26,8 +26,8 @@ Explanation: The answer is "wke", with the length of 3.
 #include <stdio.h>
 
 //ret:
-// 0- succ
 // -1- duplicated
+// other - length
 int add_hash(char *hash, char value)
 {
     int i = 0;
@@ -37,7 +37,7 @@ int add_hash(char *hash, char value)
     }
     hash[i] = value;
 
-    return 0;
+    return strlen(hash);
 }
 
 int lengthOfLongestSubstring(char *s)
@@ -46,17 +46,19 @@ int lengthOfLongestSubstring(char *s)
 
     char *hash = calloc(l + 1, sizeof(char));
 
+    int max = 0;
+    int ret = 0;
     for (int i = 0; i < l - 1; ++i) {
-        if (add_hash(hash, s[i]) == 0)
+        if ((ret = add_hash(hash, s[i])) > 0)
             continue;
 
+        max = ret > max? ret:max;
         memset(hash, 0, l + 1);
     }
 
-    int ret = strlen(hash);
 
     free(hash);
-    return ret;
+    return max;
 }
 
 int main()
