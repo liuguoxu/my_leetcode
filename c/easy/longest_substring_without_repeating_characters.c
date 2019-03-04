@@ -24,7 +24,8 @@ Explanation: The answer is "wke", with the length of 3.
  */
 
 #include <stdio.h>
-
+#include <string.h>
+#include <stdlib.h>
 //ret:
 // -1- duplicated
 // other - length
@@ -37,6 +38,7 @@ int add_hash(char *hash, char value)
     }
     hash[i] = value;
 
+	printf("%s,%ld\n", hash, strlen(hash));
     return strlen(hash);
 }
 
@@ -49,10 +51,10 @@ int lengthOfLongestSubstring(char *s)
     int max = 0;
     int ret = 0;
     for (int i = 0; i < l - 1; ++i) {
-        if ((ret = add_hash(hash, s[i])) > 0)
-            continue;
-
-        max = ret > max? ret:max;
+        if ((ret = add_hash(hash, s[i])) != -1) {
+            max = ret > max? ret:max;
+			continue;
+		}
         memset(hash, 0, l + 1);
     }
 
