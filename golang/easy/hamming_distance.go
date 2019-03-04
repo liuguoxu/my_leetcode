@@ -32,7 +32,7 @@ func hammingDistance(x int, y int) int {
 	count := 0
 	for ; tmp != 0; count++ {
 		//减1 与，每次操作减少一位为1的数
-		tmp &= (tmp - 1)
+		tmp &= tmp - 1
 	}
 	return count
 }
