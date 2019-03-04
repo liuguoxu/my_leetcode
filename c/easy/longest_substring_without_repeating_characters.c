@@ -23,6 +23,8 @@ Explanation: The answer is "wke", with the length of 3.
              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
 
+#include <stdio.h>
+
 //ret:
 // 0- succ
 // -1- duplicated
@@ -55,4 +57,11 @@ int lengthOfLongestSubstring(char *s)
 
     free(hash);
     return ret;
+}
+
+int main()
+{
+    char *str = "abcabcbb";
+
+    printf("%d\n", lengthOfLongestSubstring(str));
 }

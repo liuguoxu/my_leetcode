@@ -10,20 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02c9c5dc-7b46-41d0-9a2a-a1c92cb9514c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/c.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy/add_two_numbers.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy/longest_substring_without_repeating_characters.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/easy/reverse_integer.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../easy/flipping_an_image.go" beforeDir="false" afterPath="$PROJECT_DIR$/../golang/easy/flipping_an_image.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../easy/hamming_distance.go" beforeDir="false" afterPath="$PROJECT_DIR$/../golang/easy/hamming_distance.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../easy/merge_two_binary_trees.go" beforeDir="false" afterPath="$PROJECT_DIR$/../golang/easy/merge_two_binary_trees.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../easy/sort_array_by_parity.go" beforeDir="false" afterPath="$PROJECT_DIR$/../golang/easy/sort_array_by_parity.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../easy/two_sum.go" beforeDir="false" afterPath="$PROJECT_DIR$/../golang/easy/two_sum.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easy/longest_substring_without_repeating_characters.c" beforeDir="false" afterPath="$PROJECT_DIR$/easy/longest_substring_without_repeating_characters.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/easy/longest_substring_without_repeating_characters.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="178">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -74,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="23" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
@@ -134,15 +121,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551678755166</updated>
-      <workItem from="1551678756892" duration="7189000" />
+      <workItem from="1551678756892" duration="7835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7189000" />
+    <option name="totallyTimeSpent" value="7835000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -186,8 +173,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/easy/longest_substring_without_repeating_characters.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="178">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
         </state>
       </provider>
     </entry>
