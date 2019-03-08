@@ -33,6 +33,7 @@ Explanation: The answer is "wke", with the length of 3.
 // -1 - succ
 int add_hash(char *hash, char value)
 {
+	printf("%c\n", value);
     int i = 0;
     for (; i < strlen(hash); i++) {
         if (hash[i] == value)
@@ -51,7 +52,6 @@ int lengthOfLongestSubstring(char *s)
 
     int max = 0;
     int ret = 0;
-
     for (int i = 0; i < l; ++i) {
         if ((ret = add_hash(hash, s[i])) == -1) {
             continue;
@@ -59,7 +59,7 @@ int lengthOfLongestSubstring(char *s)
         int h_l = strlen(hash);
         max = MAX(h_l, max);
         i = i - h_l + ret;
-        memset(hash, 0, l + 1);
+       memset(hash, 0, l + 1);
     }
     int h_l = strlen(hash);
     max = MAX(h_l, max);
@@ -70,7 +70,7 @@ int lengthOfLongestSubstring(char *s)
 
 int main()
 {
-    char *str = "abcabcbb";
+    char *str = "mkhazkgrwfnmzelloioditgzihtersmfftfggnxctnqurdfilwltrtuzdofuirbnnjvtwtxrgnm";
 
     printf("%d\n", lengthOfLongestSubstring(str));
 }
