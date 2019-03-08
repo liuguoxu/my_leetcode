@@ -26,20 +26,21 @@ Explanation: The answer is "wke", with the length of 3.
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
+#define MAX(a, b) (a)>(b)? (a):(b)
+
 //ret:
-// -1- duplicated
-// other - length
+// -1 - succ
 int add_hash(char *hash, char value)
 {
     int i = 0;
     for (; i < strlen(hash); i++) {
         if (hash[i] == value)
-            return -1;
+            return i;
     }
     hash[i] = value;
 
-	printf("%s,%ld\n", hash, strlen(hash));
-    return strlen(hash);
+    return -1;
 }
 
 int lengthOfLongestSubstring(char *s)
@@ -50,14 +51,18 @@ int lengthOfLongestSubstring(char *s)
 
     int max = 0;
     int ret = 0;
-    for (int i = 0; i < l - 1; ++i) {
-        if ((ret = add_hash(hash, s[i])) != -1) {
-            max = ret > max? ret:max;
-			continue;
-		}
+
+    for (int i = 0; i < l; ++i) {
+        if ((ret = add_hash(hash, s[i])) == -1) {
+            continue;
+        }
+        int h_l = strlen(hash);
+        max = MAX(h_l, max);
+        i = i - h_l + ret;
         memset(hash, 0, l + 1);
     }
-
+    int h_l = strlen(hash);
+    max = MAX(h_l, max);
 
     free(hash);
     return max;
