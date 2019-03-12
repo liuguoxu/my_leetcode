@@ -25,51 +25,23 @@ func max(a, b int) int {
 }
 
 func maxSubArray(nums []int) int {
-	var cur int
+	l := len(nums)
+
+	if l == 0 {
+		return 0
+	}
+
+	cur, ret := 0, nums[0]
 
 	i := 0
 
 	//从左边找，找到一个数比它和他之前所有数之和还要大
-	lmax := -1
-	for i = 0; i < len(nums); i++ {
-		if nums[i] > cur+nums[i] {
-			cur = nums[i]
-			lmax = i
-		} else {
-			cur = cur + nums[i]
-		}
+
+	for i = 0; i < l; i++ {
+		cur = max(cur+nums[i], nums[i])
+		ret = max(cur, ret)
 	}
 
-	//从右边找，找到一个数比它和他之前所有数之和还要大
-	rmax := -1
-	cur = 0
-	for i = len(nums) - 1; i >= 0; i-- {
-		if nums[i] > cur+nums[i] {
-			cur = nums[i]
-			rmax = i
-		} else {
-			cur = cur + nums[i]
-		}
-	}
-
-	fmt.Println(lmax, rmax)
-
-	ret := 0
-	if lmax == -1 {
-		lmax = 0
-	}
-	if rmax == -1 {
-		rmax = len(nums) - 1
-	}
-
-	if lmax >= rmax {
-		return max(nums[lmax], nums[rmax])
-	}
-
-	for k := lmax; k <= rmax; k++ {
-		fmt.Println(nums[k])
-		ret += nums[k]
-	}
 	return ret
 }
 
