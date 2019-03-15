@@ -24,15 +24,16 @@ Explanation: There are three ways to climb to the top.
 
 
 class Solution:
-    mem = {1: 1, 2: 2}
 
     def climbStairs(self, n: int) -> int:
+        if n <= 1:
+            return 1
+        mem = {0: 1, 1: 1, 2: 2}
 
-        if n in self.mem.keys():
-            return self.mem[n]
+        for n in range(2, n + 1):
+            mem[n] = mem[n - 1] + mem[n - 2]
 
-        self.mem[n] = self.climbStairs(n - 1) + self.climbStairs(n - 2)
-        return self.mem[n]
+        return mem[n]
 
 
 print(Solution().climbStairs(40))
