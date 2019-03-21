@@ -39,11 +39,11 @@ class Solution:
             left = "0" if i < 0 else a[i]
             right = "0" if j < 0 else b[j]
 
-            print("remainder:", remainder,"left:",left,"right:",right)
+            print("remainder:", remainder, "left:", left, "right:", right)
             r, remainder = self.add(left, right, remainder)
-            print("r:",r)
+            print("r:", r)
             ret = r + ret
-            print(remainder,"ret:", ret)
+            print(remainder, "ret:", ret)
             i -= 1
             j -= 1
 
@@ -55,7 +55,6 @@ class Solution:
 
 def main():
     print(Solution().addBinary(a="11", b="1"))
-
 
 
 if __name__ == '__main__':
