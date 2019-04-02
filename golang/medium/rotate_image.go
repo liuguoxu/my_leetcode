@@ -40,6 +40,7 @@ rotate the input matrix in-place such that it becomes:
   [16, 7,10,11]
 ]
 */
+package main
 
 func rotate(matrix [][]int) {
 

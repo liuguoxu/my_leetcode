@@ -61,10 +61,10 @@ func threeSum(nums []int) [][]int {
 				}
 				x++
 				y--
-			}else if nums[x] + nums[y] <target{
-					x++
-			}else{
-						y--
+			} else if nums[x]+nums[y] < target {
+				x++
+			} else {
+				y--
 			}
 		}
 	}
